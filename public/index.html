@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ThriftRecall · Weekend Savers (fictional demo)</title>
+<meta name="description" content="ThriftRecall is a group savings (ajo / esusu) tracker demo that remembers who paid, who was late and whose turn is next, using Walrus Memory on Sui Mainnet and Tatum. Fictional data only; no real money moves.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css?v=11">
+</head>
+<body>
+<aside class="sidebar">
+  <a href="#overview" class="brand" aria-label="ThriftRecall, back to overview"><span aria-hidden="true">T</span>ThriftRecall</a>
+  <div class="workspace">YOUR SPACE</div>
+  <nav aria-label="Dashboard sections">
+    <a href="#overview"><span class="nav-icon" aria-hidden="true">◫</span> <span>Overview</span></a>
+    <a href="#contributions"><span class="nav-icon" aria-hidden="true">☷</span> <span>Contributions</span></a>
+    <a href="#schedule"><span class="nav-icon" aria-hidden="true">◷</span> <span>Collection order</span></a>
+    <a href="#insights"><span class="nav-icon" aria-hidden="true">✧</span> <span>Insights</span></a>
+    <a href="#history"><span class="nav-icon" aria-hidden="true">❖</span> <span>History</span></a>
+  </nav>
+  <div class="side-note"><b>Small steps. <br>Shared goals.</b><p>A clearer view of your circle, without the guesswork.</p></div>
+  <span class="local-label">DEMO · FICTIONAL DATA</span>
+</aside>
+<div class="page">
+<div class="safety"><span class="dot" aria-hidden="true"></span>Fictional demo: no real money moves</div>
+<main>
+<header id="overview"><div class="breadcrumb">MY CIRCLES <span aria-hidden="true">/</span> WEEKEND SAVERS</div><span class="week">WEEK 02</span></header>
+<section class="heading">
+  <div><p class="eyebrow">LET’S KEEP THINGS MOVING</p><h1>Your circle<br class="mobile-break"> at a glance<span aria-hidden="true">.</span></h1><p>One shared goal. Everyone’s contribution, accounted for.</p></div>
+  <div class="group-tag"><span class="avatars" aria-hidden="true"><i>A</i><i>T</i><i>N</i><i>E</i><i>H</i></span><span>5 demo members</span></div>
+</section>
+<div class="overview-stack">
+<section class="panel live-panel" aria-labelledby="live-status">
+  <p class="eyebrow">MAINNET · READ ONLY</p>
+  <h2 id="live-status" role="status">Checking the existing connection…</h2>
+  <div id="live-badges" class="live-badges" role="group" aria-label="Individual read checks"></div>
+  <p id="live-evidence">Reading only. No new memory is being saved.</p>
+  <p>The week 2 board starts from the saved Circle history (week 1 is complete; in week 2 only Amaka has a recorded contribution so far). Recording, undo and reset change this page only; they do not save or delete Walrus memories.</p>
+  <div id="memory-detail" hidden><p class="eyebrow">RETRIEVED FICTIONAL TEST MEMORY (EXACT TEXT)</p><blockquote id="memory-text"></blockquote><p id="memory-meta"></p></div>
+  <small>Live reads are cached for five minutes. This site has no write routes.</small>
+</section>
+<div class="top-grid">
+  <section class="progress-card" aria-labelledby="progress-title">
+    <div class="progress-copy">
+      <div class="card-label">WEEKEND SAVERS <span>Weekly circle</span></div>
+      <h2 id="progress-title">This week’s <br>recorded contributions</h2>
+      <div class="amount" id="total">₦5,000</div>
+      <p class="goal" id="goal">of ₦25,000 planned for week 2</p>
+      <div class="recorded-count"><span class="mini-dot" aria-hidden="true"></span><span id="count">1 of 5 recorded</span></div>
+      <p class="fine">Self-reported sample records. <br>Not verified payments or money held.</p>
+    </div>
+    <div class="ring-wrap"><div class="ring" id="ring" role="progressbar" aria-label="Sample contribution progress" aria-valuemin="0" aria-valuemax="5" aria-valuenow="1"><div><strong id="percent">20<span>%</span></strong><small>RECORDED</small></div></div><span class="per-member">₦5,000 / member</span></div>
+  </section>
+  <section class="next-card" aria-labelledby="next-name">
+    <div class="card-label">UP NEXT <span aria-hidden="true">↗</span></div>
+    <div class="recipient-avatar" aria-hidden="true">T<span>02</span></div>
+    <p class="eyebrow">WEEK 2 RECIPIENT</p>
+    <h2 id="next-name">Tunde (Demo B)</h2>
+    <div class="planned">₦25,000 <span>planned collection</span></div>
+    <p class="fine">Collection order only. <br>No payout or transfer takes place.</p>
+  </section>
+</div>
+</div>
+<div class="lower-grid">
+  <section class="panel contributions" id="contributions" aria-labelledby="contributions-title">
+    <div class="section-title"><div><p class="eyebrow">KEEP THE RECORD STRAIGHT</p><h2 id="contributions-title">Contributions</h2></div><span class="tag">Week 2</span></div>
+    <div class="table-head" aria-hidden="true"><span>MEMBER</span><span>WEEKLY · ₦5,000</span></div>
+    <div id="member-list"></div>
+    <div class="tools"><button type="button" id="undo" disabled>↶ Undo last change</button><button type="button" id="reset">Reset sample</button></div>
+    <p id="feedback" role="status" aria-live="polite">Local only. Refreshing restores the sample.</p>
+  </section>
+  <div class="right-stack">
+    <section class="panel insights" id="insights" aria-labelledby="insights-title">
+      <div class="insight-icon" aria-hidden="true">✧</div>
+      <p class="eyebrow">A LITTLE NUDGE</p>
+      <h2 id="insights-title">Good records. <br>Better follow-through.</h2>
+      <p id="reminder"></p>
+      <details><summary>How this suggestion works</summary><p>A simple sample rule: suggest a reminder for outstanding members who were late before. The saved memories show Emeka (Demo D) paid week 1 late, so he gets the nudge while his week 2 contribution is outstanding. No AI prediction is made and no message is sent.</p></details>
+      <p class="disconnected"><span aria-hidden="true"></span>Reminder suggestions use a local sample rule. The live memories are shown in Circle history below.</p>
+    </section>
+  </div>
+</div>
+<section class="panel schedule" id="schedule" aria-labelledby="schedule-title">
+  <div class="section-title"><div><p class="eyebrow">FAIR BY DESIGN</p><h2 id="schedule-title">Everyone gets a turn.</h2></div><span class="tag">Collection order</span></div>
+  <ol>
+    <li class="done"><span class="step" aria-hidden="true">01</span><div><strong>Amaka (Demo A)</strong><small>Week 1 · received</small></div></li>
+    <li class="current" aria-current="step"><span class="step" aria-hidden="true">02</span><div><strong>Tunde (Demo B)</strong><small>Week 2 · this week</small></div><span class="current-label">CURRENT</span></li>
+    <li><span class="step" aria-hidden="true">03</span><div><strong>Ngozi (Demo C)</strong><small>Week 3</small></div></li>
+    <li><span class="step" aria-hidden="true">04</span><div><strong>Emeka (Demo D)</strong><small>Week 4</small></div></li>
+    <li><span class="step" aria-hidden="true">05</span><div><strong>Halima (Demo E)</strong><small>Week 5</small></div></li>
+  </ol>
+  <p class="schedule-note">Order agreed in the saved memories. Ngozi has asked to swap payout weeks with Emeka; the swap is pending group approval, so the order above is unchanged.</p>
+</section>
+<section class="panel history" id="history" aria-labelledby="history-title">
+  <div class="section-title"><div><p class="eyebrow">WHAT THE CIRCLE REMEMBERS</p><h2 id="history-title">Circle history</h2></div><span class="tag">Walrus Mainnet · read only</span></div>
+  <p class="history-note">Fictional demo data, read from Walrus Mainnet (namespace <code>ajorecall-demo</code>, kept from the project’s earlier working name). Nothing here moves money, and this page cannot add or delete memories. The saved memories use Demo A–E; the names are fictional labels added on this page only: Amaka (Demo A), Tunde (Demo B), Ngozi (Demo C), Emeka (Demo D) and Halima (Demo E).</p>
+  <p id="history-status" role="status">Loading saved memories…</p>
+  <div id="history-summary" class="history-summary" hidden><p class="eyebrow">WHAT THRIFTRECALL REMEMBERS · DERIVED FROM THE MEMORIES</p><ul id="summary-list"></ul></div>
+  <ol id="history-list" class="history-list" hidden></ol>
+</section>
+<footer>Built around trust. Designed for clarity.<span>Fictional sample data only · No wallet needed for this read-only demo</span></footer>
+</main>
+</div>
+<script src="state.js?v=11"></script>
+<script src="app.js?v=11"></script>
+<script src="live.js?v=11"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "thriftrecall",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ThriftRecall: a group savings (ajo/esusu) tracker demo with Walrus Memory on Sui Mainnet and Tatum Sui RPC. Fictional data only; no real money moves.",
+  "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "dev": "node dev-server.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "1.14.7",
+    "@mysten-incubation/memwal": "0.1.13",
+    "@mysten/seal": "1.5.4",
+    "@mysten/sui": "2.39.1",
+    "@protobuf-ts/grpc-transport": "2.11.1"
+  }
+}
